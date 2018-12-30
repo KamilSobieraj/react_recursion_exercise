@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import RecursiveComponent from "./RecursiveComponent";
 
-// write components here
-// const One and so on...
 const One = ({ children }) => {
   return <div className="box">One {children}</div>;
 };
@@ -12,8 +10,6 @@ const Two = ({ children }) => {
 const Three = ({ children }) => {
   return <div className="box">Three {children}</div>;
 };
-
-// assign components below
 const components = [One, Two, Three];
 
 export default class Recursion extends Component {

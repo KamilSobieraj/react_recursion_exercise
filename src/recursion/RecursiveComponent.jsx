@@ -7,21 +7,14 @@ export default class RecursiveComponent extends Component {
     this.components = this.props.components;
   }
   recurseThemAll() {
-    return this.props.components.reduceRight(
+    return this.components.reduceRight(
       (children, NestedComponent) => (
         <NestedComponent>{children}</NestedComponent>
       ),
       null
     );
   }
-
   render() {
-    return (
-      <div>
-        {this.recurseThemAll()}
-        {/*this.props.components.map(e => e())*/}
-        {/* invoke recursive method here */}
-      </div>
-    );
+    return <div>{this.recurseThemAll()}</div>;
   }
 }
